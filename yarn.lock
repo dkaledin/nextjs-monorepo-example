@@ -2502,6 +2502,11 @@ next@10.0.3:
   optionalDependencies:
     sharp "0.26.2"
 
+nextjs-monorepo-tools@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/nextjs-monorepo-tools/-/nextjs-monorepo-tools-0.0.3.tgz#308cb97e6ae4be9c50f2634b17037333a91a0a9f"
+  integrity sha512-1ft+W1DylzfLUMHYmKfsCjK4QlZRzQaj6VrVrNOPFRscpH4KwTZAFJofLBnshIQ7ouaw5vh7DpxhlkMT0HQiMA==
+
 node-abi@^2.7.0:
   version "2.19.3"
   resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-2.19.3.tgz#252f5dcab12dad1b5503b2d27eddd4733930282d"

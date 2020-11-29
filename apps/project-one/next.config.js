@@ -1,7 +1,9 @@
-const patchWebpackConfig = require("../../monorepo-tools/webpack");
+const { patchWebpackConfig } = require("nextjs-monorepo-tools");
 
 const config = {
-  webpack: patchWebpackConfig,
+  webpack: patchWebpackConfig({
+    commonDirs: ["libs"],
+  }),
 };
 
 module.exports = config;
