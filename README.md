@@ -25,7 +25,7 @@ In this project I would like to explain how to convert your [Next.js](https://ne
 ```json
 {
 	"compilerOptions": {
-		...
+		// ...
 		"baseUrl": ".",
 		"paths": {
 			"@common/common-component": ["libs/common-component"]
@@ -33,12 +33,15 @@ In this project I would like to explain how to convert your [Next.js](https://ne
 	}
 }
 ```
-#### 3. Put into root directory `monorepo-tools` directory from this repository.
+#### 3. Add to project [nextjs-monorepo-tools](https://www.npmjs.com/package/nextjs-monorepo-tools) package as dependency.
 #### 4. Add custom **Webpack** configuration to `next.config.js`:
 ```js
-const  patchWebpackConfig = require("../../monorepo-tools/webpack");
-const  config = {
-	webpack: patchWebpackConfig,
+const { patchWebpackConfig } = require("nextjs-monorepo-tools");
+
+const config = {
+  webpack: patchWebpackConfig({
+    commonDirs: ["libs"], // "libs" is directory for shared modules
+  }),
 };
 
 module.exports = config;
@@ -66,7 +69,7 @@ Just create new directory in `libs` and add new section in `tsconfig.json`.
 ```json
 {
 	"compilerOptions": {
-		...
+		// ...
 		"paths": {
 			"@common/common-component": ["libs/common-component"],
 			"@common/common-component-two": ["libs/common-component-two"],
